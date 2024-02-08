@@ -34,6 +34,45 @@
 
 //mengubah node root
 //salah satu cara agar ebih efektif lagi memilih dom
-const sectionB=document.getElementById('b');
-const p4=sectionB.querySelector('p');
-p4.style.backgroundColor='orange';
+// const sectionB=document.getElementById('b');
+// const p4=sectionB.querySelector('p');
+// p4.style.backgroundColor='orange';
+
+//end selection
+
+
+//DOM MANIPULATION
+
+// 1.Manipulasi Elemen
+//  -untuk menangkap judul halaman, mengambil paragraf dll
+//      * Methode
+//          - element.innerHtml
+//          - element.style.<property> => mengubah style pada elemen
+//          - element.setAttribute() => memanipulasi attribute pada elemen
+//          - element.classList => memanipulasi class
+//          - etc
+// 2. Manipulasi Node
+//  - Menyisipkan elemen baru pada halaman, menghilangkan sebuah elemen
+
+//element.innerHTMl => sudah ada contohnya di atas
+//element.style => sudah ada contohnya di atas
+
+//element.classList => memanipulasi class
+//  -element.classList.add() = > menambahkan class
+const p2 = document.querySelector('.p2');
+p2.classList.add('label');
+//
+//  -element.classList.remove() => menghapus class
+p2.classList.remove('label');
+//
+//  -element.classList.toggle() => jika tidak ada nama classnya akan ditambahkan namun jika ada akan dihapus
+p2.classList.toggle('label'); //true => dibuatkan classnya karena class baru di remove
+//
+//  -element.classList.item() => untuk mengetahui nama class pada sebuah elemen
+//      #jika kondisi di dalam element ada 3 class maka mencarinya menggunakan struktur data array dimulai dari 0
+//
+//  -element.classList.contains() => 
+p2.classList.item('label') //true => class dengan nama label ada
+//  -element.classList.replace() => mengganti nama class
+p2.classList.replace('label', 'container') // class label berubah menjadi container
+
