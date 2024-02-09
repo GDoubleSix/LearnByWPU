@@ -86,50 +86,88 @@
 //      -etc
 
 //contoh
-//buat elemen baru
-const pBaru = document.createElement('p');
-const textPBaru = document.createTextNode('paragraph baru');
-//
-//simpan tulisan kedalam paragraf
-pBaru.appendChild(textPBaru);
-//
-//Simpan pBaru di akhir sectionA
-const sectionA = document.getElementById('a');
-sectionA.appendChild(pBaru);
-//
+// buat elemen baru
+// const pBaru = document.createElement('p');
+// const textPBaru = document.createTextNode('paragraph baru');
+
+// simpan tulisan kedalam paragraf
+// pBaru.appendChild(textPBaru);
+
+// Simpan pBaru di akhir sectionA
+// const sectionA = document.getElementById('a');
+// sectionA.appendChild(pBaru);
+
 
 
 //buat element baru
-const liBaru = document.createElement('li');
-const textLiBaru = document.createTextNode('Item baru');
+// const liBaru = document.createElement('li');
+// const textLiBaru = document.createTextNode('Item baru');
 //
 //simpan tulisan kedapam li
-liBaru.appendChild(textLiBaru);
+// liBaru.appendChild(textLiBaru);
 
 //simpan liBaru sebelum li ke 2
-const ulLi = document.querySelector('section#b ul');
-const li2 = ulLi.querySelector('li:nth-child(2)');
-ulLi.insertBefore(liBaru, li2);
+// const ulLi = document.querySelector('section#b ul');
+// const li2 = ulLi.querySelector('li:nth-child(2)');
+// ulLi.insertBefore(liBaru, li2);
 //
 
 //removeChild() => menghapus element
-const link = sectionA.getElementsByTagName('a')[0];
-sectionA.removeChild(link);
+// const link = sectionA.getElementsByTagName('a')[0];
+// sectionA.removeChild(link);
 //
 
 //replaceChild()
-const sectionB = document.getElementById('b'); //menangkap parent 
-const p4 = sectionB.querySelector('p') // menangkap p4 yang berada di sectionB
+// const sectionB = document.getElementById('b'); //menangkap parent 
+// const p4 = sectionB.querySelector('p') // menangkap p4 yang berada di sectionB
 
-const h2Baru = document.createElement('h2'); //membuat elemt h2 baru
-const textH2 = document.createTextNode('Judul Baru'); // isi dari element h2 yang dibuat
+// const h2Baru = document.createElement('h2'); //membuat elemt h2 baru
+// const textH2 = document.createTextNode('Judul Baru'); // isi dari element h2 yang dibuat
 
-h2Baru.appendChild(textH2);//menyimpan textH2 kedalam h2Baru
+// h2Baru.appendChild(textH2);//menyimpan textH2 kedalam h2Baru
 
-sectionB.replaceChild(h2Baru,p4); //mengubah element p pada sectionB menjadi h2Baru yang sudah di append dengan isi textH2
-
-
+// sectionB.replaceChild(h2Baru,p4); //mengubah element p pada sectionB menjadi h2Baru yang sudah di append dengan isi textH2
 
 
+//TEST PEMAHAMAN
+// 1. ubah border manjadi warna RGB
+//      - h1 & container => red *done
+//      - section => green * done
+//      - p dan li => blue * done
+// 2. manipulasi beberapa elemen
+//      - ubah hello world menjadi judul besar dan berada di tengah *done
+//      - tambah paragraph baru di atas paragraph 3 *done
+//      - ubah paragraph 4 dengan judul baru
+//      - judul baru berada di tengah
+//      - tambahkan item 4 dan item baru(5) dengan cara yang berbeda
+
+const h1 = document.getElementsByTagName('h1')[0]; //ambil tag h1 dengan nillai array [0]/pertama
+h1.style.backgroundColor='red'; //merubah background color h1 menjadi merah
+h1.style.textAlign='center'; // meletakkan teks h1 ke tengah
+
+const container = document.getElementById('container'); //ambil id dengan nama container
+container.style.backgroundColor ="red"; //berikan warna merah pada id container
+
+const section = document.querySelectorAll('section'); //ambil semua elemen dengan nama section
+section[0].style.backgroundColor='green'; //ubah section pertama dengan warna hijau
+section[1].style.backgroundColor='green'; //ubah section kedua dengan warna hijau
+
+const p = document.getElementsByTagName('p');//ambil element dengan tag p
+for(i=0; i<p.length; i++){ // semua elemen dengan tag p (p.length)
+    p[i].style.backgroundColor='blue'; //ubah elemen p dengan background berwarna biru
+}
+
+const li = document.getElementsByTagName('li'); //ambil elemen li
+for(i=0; i<li.length; i++){ //semua elemen dengan tag li
+    li[i].style.backgroundColor='blue'; //ubah warnanya menjadi biru
+}
+
+const pBaru = document.createElement('p'); // Membuat elemen <p> baru
+const textPBaru = document.createTextNode('paragraph baru'); // Membuat teks untuk elemen <p> baru
+pBaru.appendChild(textPBaru); // Menambahkan teks ke dalam elemen <p> baru
+
+const sectionA = document.getElementById('a'); // Mendapatkan elemen <section> dengan ID 'a'
+const parBaru = sectionA.querySelector('p:nth-child(4)'); // Mendapatkan elemen <p> yang akan menjadi referensi
+sectionA.insertBefore(pBaru, parBaru); // Menyisipkan elemen <p> baru sebelum elemen referensi
 
 
