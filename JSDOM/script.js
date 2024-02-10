@@ -137,8 +137,8 @@
 // 2. manipulasi beberapa elemen
 //      - ubah hello world menjadi judul besar dan berada di tengah *done
 //      - tambah paragraph baru di atas paragraph 3 *done
-//      - ubah paragraph 4 dengan judul baru
-//      - judul baru berada di tengah
+//      - ubah paragraph 4 dengan judul baru *done
+//      - judul baru berada di tengah *done
 //      - tambahkan item 4 dan item baru(5) dengan cara yang berbeda
 
 const h1 = document.getElementsByTagName('h1')[0]; //ambil tag h1 dengan nillai array [0]/pertama
@@ -169,5 +169,17 @@ pBaru.appendChild(textPBaru); // Menambahkan teks ke dalam elemen <p> baru
 const sectionA = document.getElementById('a'); // Mendapatkan elemen <section> dengan ID 'a'
 const parBaru = sectionA.querySelector('p:nth-child(4)'); // Mendapatkan elemen <p> yang akan menjadi referensi
 sectionA.insertBefore(pBaru, parBaru); // Menyisipkan elemen <p> baru sebelum elemen referensi
+
+
+const h2ForP4Baru = document.createElement('h2');//buat element baru
+const textH2 = document.createTextNode('Judul Baru'); // membuat teks untuk elemen <p> baru
+h2ForP4Baru.appendChild(textH2); //menambahkan teks ke dalaman lemen <p> baru
+
+const sectionB =document.getElementById('b');
+const p4 = sectionB.querySelector('p');
+
+sectionB.replaceChild(h2ForP4Baru,p4)
+sectionB.style.textAlign='center';
+
 
 
