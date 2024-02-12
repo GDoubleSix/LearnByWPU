@@ -5,7 +5,7 @@
 
 //addEventListener()
 const p4 = document.querySelector('section#b p');
-p4.addEventListener('enter',function() {
+p4.addEventListener('click',function() {
     if(confirm() == true){
         const ul = document.querySelector('section#b ul');
     const li = document.createElement('li');
