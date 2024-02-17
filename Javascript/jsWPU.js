@@ -202,52 +202,52 @@
 // }
 
 // // game suit
-// tanya = true;
-// while (tanya) {
-// //menangkap pilihan player
-// var p = prompt('Tentukan pilihan kamu \n gajah \n semut \n orang');
+tanya = true;
+while (tanya) {
+//menangkap pilihan player
+var p = prompt('Tentukan pilihan kamu \n gajah \n semut \n orang');
 
-// //random pilihan komputer
-// //math random
-// var comp = Math.random();
-// if(comp < 0.35){
-//     comp = 'gajah';
-// }else if(comp < 0.70){
-//     comp = 'orang';
-// }else{
-//     comp = 'semut';
-// }
+//random pilihan komputer
+//math random
+var comp = Math.random();
+if(comp < 0.35){
+    comp = 'gajah';
+}else if(comp < 0.70 && comp < 0.67){
+    comp = 'orang';
+}else{
+    comp = 'semut';
+}
 
-// //rules
-// var hasil ='';
-// if(p == comp){
-//     hasil = 'SERI';
-// }else if (p == 'gajah'){
-//     // if(comp == 'orang'){
-//     //     hasil = 'Menang';
-//     // }else{
-//     //     hasil = 'Kalah';
-//     // }
-//     hasil = (comp == 'orang') ? 'Menang' : 'Kalah';
-// }else if (p == 'orang'){
-//     if (comp =='semut'){
-//         hasil = 'Menang';
-//     }else{
-//         hasil = 'Kalah';
-//     }
-// }else if(p == 'semut'){
-//     if(comp == 'gajah'){
-//         hasil = 'Menang';
-//     }else{
-//         hasil = 'Kalah';
-//     }
-// }
+//rules
+var hasil ='';
+if(p == comp){
+    hasil = 'SERI';
+}else if (p == 'gajah'){
+    if(comp == 'orang'){
+        hasil = 'Menang';
+    }else{
+        hasil = 'Kalah';
+    }
+    hasil = (comp == 'orang') ? 'Menang' : 'Kalah';
+}else if (p == 'orang'){
+    if (comp =='semut'){
+        hasil = 'Menang';
+    }else{
+        hasil = 'Kalah';
+    }
+}else if(p == 'semut'){
+    if(comp == 'gajah'){
+        hasil = 'Menang';
+    }else{
+        hasil = 'Kalah';
+    }
+}
 
-// // tampilkan hasil
-// alert (`Kamu memilih ${p} komputer memilih ${comp}\n ${hasil}`);
-// tanya = confirm('lagi');
-// }
-// alert ('Terimakasih sudah bermain');
+// tampilkan hasil
+alert (`Kamu memilih ${p} komputer memilih ${comp}\n ${hasil}`);
+tanya = confirm('lagi');
+}
+alert ('Terimakasih sudah bermain');
 
 //tebak tebakan angka noted(masih ada bug)
 // k = 0;
